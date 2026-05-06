@@ -409,7 +409,8 @@ html,body{
               <b>DOB:</b> 16 August 2000 &nbsp;|&nbsp;
               <b>Nationality:</b> Dutch<br>
               <b>Location:</b> Aldinga Beach, South Australia<br>
-              <b>Email:</b> fabienne.bruggeman@hotmail.com
+              <b>Email:</b> fabienne.bruggeman@hotmail.com &nbsp;|&nbsp;
+              <b>Phone:</b> +61416922016
             </div>
           </div>
           <div class="box">
