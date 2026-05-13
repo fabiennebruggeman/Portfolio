@@ -252,12 +252,44 @@ html,body{
         </div>
       </div>
       <div class="port-tabs">
-        <div class="port-tab active" id="tab-writing" onclick="switchTab('writing')">Writing</div>
-        <div class="port-tab" id="tab-developing" onclick="switchTab('developing')">Developing</div>
+        <div class="port-tab active" id="tab-developing" onclick="switchTab('developing')">Developing</div>
       </div>
       <div class="port-body">
-        <div id="panel-writing">&nbsp;</div>
-        <div id="panel-developing" style="display:none;">&nbsp;</div>
+        <div id="panel-developing">
+          <!-- flagent.io card -->
+          <div style="border:2px solid;border-color:#808080 #fff #fff #808080;background:#fff;margin-bottom:6px;">
+            <div style="background:linear-gradient(to right,#000080,#1084d0);padding:2px 5px;display:flex;align-items:center;gap:5px;">
+              <span style="color:#fff;font-size:10px;">&#9992;</span>
+              <span style="color:#fff;font-size:11px;font-weight:bold;flex:1;">flagent.io</span>
+              <span style="color:rgba(255,255,255,0.6);font-size:9px;">flight search tool</span>
+            </div>
+            <div style="padding:8px 10px;font-size:10px;line-height:1.6;color:#000;">
+              <div style="display:flex;gap:8px;margin-bottom:6px;">
+                <div style="border:2px solid;border-color:#808080 #fff #fff #808080;background:#f0f0f0;padding:4px 8px;text-align:center;min-width:60px;">
+                  <div style="font-size:16px;">&#9992;</div>
+                  <div style="font-size:9px;margin-top:1px;">flagent</div>
+                </div>
+                <div style="flex:1;">
+                  <b>flagent.io</b> &mdash; a minimalist AI-powered flight search tool.<br>
+                  Find cheapest routes, get AI concierge advice, set fare alerts,
+                  and generate trip briefs &mdash; all in a single clean interface.
+                </div>
+              </div>
+              <div style="border-top:1px solid #d0d0d0;padding-top:5px;display:flex;gap:10px;flex-wrap:wrap;">
+                <span><b>Stack:</b> Python &bull; Streamlit &bull; SerpAPI &bull; OpenRouter</span>
+                <span><b>Type:</b> SaaS &bull; Commercial</span>
+              </div>
+              <div style="margin-top:6px;display:flex;gap:4px;">
+                <div onclick="window.open('https://github.com/fabiennebruggeman/Flagent','_blank')"
+                     style="cursor:pointer;background:#c0c0c0;border:2px solid;border-color:#fff #808080 #808080 #fff;padding:2px 8px;font-size:10px;display:inline-flex;align-items:center;gap:4px;">
+                  &#128190; View on GitHub
+                </div>
+                <div style="border-left:1px solid #808080;margin:0 2px;"></div>
+                <span style="font-size:9px;color:#808080;align-self:center;">Concierge &bull; Scanner &bull; Trip Brief &bull; Alerts</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -540,10 +572,8 @@ function closePortfolio() {
 
 //  Tab switching
 function switchTab(name) {
-  document.getElementById('tab-writing').classList.remove('active');
   document.getElementById('tab-developing').classList.remove('active');
   document.getElementById('tab-' + name).classList.add('active');
-  document.getElementById('panel-writing').style.display   = name === 'writing'    ? '' : 'none';
   document.getElementById('panel-developing').style.display = name === 'developing' ? '' : 'none';
 }
 
